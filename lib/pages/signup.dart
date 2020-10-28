@@ -8,6 +8,10 @@ class HealthLifeSignUpPage extends StatefulWidget {
 }
 
 class _HealthLifeSignUpPageState extends State<HealthLifeSignUpPage> {
+  var _nameController = new TextEditingController();
+  var _emailController = new TextEditingController();
+  var _passwordController = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,6 +133,7 @@ class _HealthLifeSignUpPageState extends State<HealthLifeSignUpPage> {
                                             ),
                                           ),
                                           child: TextFormField(
+                                            controller: _nameController,
                                             decoration: InputDecoration(
                                               labelText: "Full Name",
                                               border: InputBorder.none,
@@ -149,6 +154,7 @@ class _HealthLifeSignUpPageState extends State<HealthLifeSignUpPage> {
                                             ),
                                           ),
                                           child: TextFormField(
+                                            controller: _emailController,
                                             decoration: InputDecoration(
                                               labelText: "Email Address",
                                               border: InputBorder.none,
@@ -170,6 +176,7 @@ class _HealthLifeSignUpPageState extends State<HealthLifeSignUpPage> {
                                             ),
                                           ),
                                           child: TextFormField(
+                                            controller: _passwordController,
                                             decoration: InputDecoration(
                                               labelText: "Password",
                                               border: InputBorder.none,
